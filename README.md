@@ -1,16 +1,13 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-<h3 align="center">PROJECT_NAME</h3>
-<p align="center">
-  <img src="PROJECT_IMG_LINK" />
-</p>
+<h3 align="center">Google MT5 For Everything</h3>
 
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project 
 
-PROJECT_ABOUT
+Google MT5 Transformers models of any size for everything that is input-output NLP using `PyTorch-Lightning`, `Hugging Face`, `Cuda` and `Streamlit`.
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -43,7 +40,7 @@ PROJECT_ABOUT
 1. Clone the repo
 
 ```shell
-git clone PROJECT_LINK
+git clone https://github.com/DvdNss/Google-MT5-For-Everything
 ```
 
 2. Install requirements
