@@ -1,2 +1,6 @@
 venv/
 .idea/
+data/
+model/
+!data/train_ex.tsv
+!data/valid_ex.tsv
