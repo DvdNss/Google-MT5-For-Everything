@@ -2,5 +2,6 @@ venv/
 .idea/
 data/
 model/
+tokenizer/
 !data/train_ex.tsv
 !data/valid_ex.tsv
