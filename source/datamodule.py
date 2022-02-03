@@ -97,7 +97,9 @@ class DataModule(LightningDataModule):
 
         # Load tokenizer and new tokens
         self.tokenizer = AutoTokenizer.from_pretrained(self.tokenizer_name_or_path, use_fast=True)
-        self.tokenizer.add_tokens(self.added_tokens) if self.added_tokens is not None else None
+        if self.added_tokens is not None:
+            self.tokenizer.add_tokens(self.added_tokens)
+            print(f"{self.added_tokens} tokens have been added to tokenizer. ")
         self.tokenizer.save_pretrained(f'../tokenizer')
 
     def setup(self, stage: Optional[str] = None, save: bool = False) -> None:
