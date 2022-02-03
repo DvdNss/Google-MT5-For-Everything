@@ -18,7 +18,7 @@ class MT5(LightningModule):
     Google MT5 transformer class.
     """
 
-    def __init__(self, model_name_or_path: str = None):
+    def __init__(self, model_name_or_path: str = None, learning_rate: float = 5e-4):
         """
         Initialize module.
 
@@ -29,6 +29,7 @@ class MT5(LightningModule):
 
         # Load model and tokenizer
         self.save_hyperparameters()
+        self.lr = learning_rate
         self.model = MT5ForConditionalGeneration.from_pretrained(
             model_name_or_path) if model_name_or_path is not None else None
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path,
@@ -91,7 +92,7 @@ class MT5(LightningModule):
         Optimizer configuration.
         """
 
-        return AdamW(self.model.parameters(), lr=5e-4)
+        return AdamW(self.model.parameters(), lr=self.lr)
 
     def get_progress_bar_dict(self):
         """
