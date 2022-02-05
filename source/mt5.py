@@ -104,16 +104,17 @@ class MT5(LightningModule):
 
         return items
 
-    def predict(self, inputs, max_length, **kwargs):
+    def predict(self, inputs, input_max_length, output_max_length, **kwargs):
         """
         Inference processing.
 
         :param inputs: list of inputs
-        :param max_length: max_length of outputs
+        :param input_max_length: max_length of inputs
+        :param output_max_length: max length of outputs
         """
 
         # Tokenize inputs
-        inputs = self.tokenizer(inputs, max_length=max_length, padding='max_length', truncation=True,
+        inputs = self.tokenizer(inputs, max_length=input_max_length, padding='max_length', truncation=True,
                                 return_tensors="pt")
 
         # Retrieve input_ids and attention_mask
@@ -121,7 +122,7 @@ class MT5(LightningModule):
         attention_mask = inputs.attention_mask.to(self.model.device)
 
         # Predict
-        outputs = self.model.generate(input_ids=input_ids, attention_mask=attention_mask, max_length=max_length,
+        outputs = self.model.generate(input_ids=input_ids, attention_mask=attention_mask, max_length=output_max_length,
                                       **kwargs)
 
         # Decode outputs
