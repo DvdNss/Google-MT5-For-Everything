@@ -36,8 +36,10 @@ def run():
     parser.add_argument('--seed', help='Set seed. ', default=42, type=int)
     parser = parser.parse_args()
 
+    # Seed module
     seed_everything(parser.seed)
 
+    # Build datamodule
     data = DataModule(
         train_file=parser.train_file,
         valid_file=parser.valid_file,
@@ -49,8 +51,10 @@ def run():
         added_tokens=parser.added_tokens.split('+') if parser.added_tokens is not None else None
     )
 
+    # Build model
     model = MT5(model_name_or_path=parser.model_name_or_path, learning_rate=parser.lr)
 
+    # Run training
     Trainer(
         max_epochs=parser.epochs,
         gpus=parser.num_gpus,
