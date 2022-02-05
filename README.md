@@ -65,6 +65,7 @@ pip install -r requirements.txt
     * `mt5.py`: model script.
     * `train.py`: training script.
 * `tokenizer/`: folder containing tokenizer.
+* `app.py`: streamlit web app script.
 * `LICENSE`
 * `README.md`
 * `requirements.txt`
@@ -138,25 +139,25 @@ David NAISSE - [@LinkedIn](https://www.linkedin.com/in/davidnaisse/) - private.d
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/sunwaee/PROJECT_NAME.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/sunwaee/Google-MT5-For-Everything.svg?style=for-the-badge
 
-[contributors-url]: https://github.com/Sunwaee/PROJECT_NAME/graphs/contributors
+[contributors-url]: https://github.com/Sunwaee/Google-MT5-For-Everything/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/sunwaee/PROJECT_NAME.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/sunwaee/Google-MT5-For-Everything.svg?style=for-the-badge
 
-[forks-url]: https://github.com/Sunwaee/PROJECT_NAME/network/members
+[forks-url]: https://github.com/Sunwaee/Google-MT5-For-Everything/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/sunwaee/PROJECT_NAME.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/sunwaee/Google-MT5-For-Everything.svg?style=for-the-badge
 
-[stars-url]: https://github.com/Sunwaee/PROJECT_NAME/stargazers
+[stars-url]: https://github.com/Sunwaee/Google-MT5-For-Everything/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/sunwaee/PROJECT_NAME.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/sunwaee/Google-MT5-For-Everything.svg?style=for-the-badge
 
-[issues-url]: https://github.com/Sunwaee/PROJECT_NAME/issues
+[issues-url]: https://github.com/Sunwaee/Google-MT5-For-Everything/issues
 
-[license-shield]: https://img.shields.io/github/license/sunwaee/PROJECT_NAME.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/sunwaee/Google-MT5-For-Everything.svg?style=for-the-badge
 
-[license-url]: https://github.com/Sunwaee/PROJECT_NAME/blob/master/LICENSE.txt
+[license-url]: https://github.com/Sunwaee/Google-MT5-For-Everything/blob/master/LICENSE.txt
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 
