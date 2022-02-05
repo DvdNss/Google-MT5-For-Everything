@@ -57,6 +57,8 @@ pip install -r requirements.txt
 ### Structure
 
 * `data/`: folder containing train/valid files.
+  * `train_example.tsv`: training file example.
+  * `valid_example.tsv`: validation file example.
 * `model/`: folder containing models.
 * `resource/`: folder containing repo's imgs.
 * `source/`: folder containing source files.
