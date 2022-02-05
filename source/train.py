@@ -27,7 +27,7 @@ def run():
     parser.add_argument('--input_max_length', help='Max length of inputs (tokens). ', default=512, type=int)
     parser.add_argument('--output_max_length', help='Max length of outputs (tokens). ', default=128, type=int)
     parser.add_argument('--batch_size', help='Batch size for traning and evaluation. ', default=1, type=int)
-    parser.add_argument('--num_workers', help='Number of cpu to use. ', default=os.cpu_count(), type=int)
+    parser.add_argument('--num_workers', help='Number of cpu to use (dataloaders). ', default=os.cpu_count(), type=int)
     parser.add_argument('--num_gpus', help='Number of gpu to use. ', default=torch.cuda.device_count(), type=int)
     parser.add_argument('--output_dir', help='Output directory. ', default='model/', type=str)
     parser.add_argument('--model_name_or_path', help='Model name. ', default='google/mt5-small', type=str)
