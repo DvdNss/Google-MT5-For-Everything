@@ -110,7 +110,6 @@ Trainer(max_epochs=10, gpus=1, default_root_dir='model/').fit(model=model, datam
 3. Use a model for inference (see `inference.py` script).
 ```python
 from transformers import AutoTokenizer
-
 from source.mt5 import MT5
 
 # Loading model and tokenizer
