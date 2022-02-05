@@ -6,9 +6,6 @@ Author: @DvdNss
 Created on 2/5/2022
 """
 
-import os
-
-import nltk
 import streamlit as st
 import torch
 from transformers import AutoTokenizer
@@ -38,15 +35,16 @@ def load_model(model_path):
 st.set_page_config(layout="centered")
 st.title("MT5 For Everything by @DvdNss")
 
-path_to_checkpoint = 'path_to_checkpoint.ckpt'
+path_to_checkpoint = 'model/model.ckpt'
 model = load_model(model_path=path_to_checkpoint)
 
 # Input area
-inputs = st.text_area('Input', max_chars=2048, height=250)
+inputs = st.text_area('Input: ', value='question: Who is the French president?  context: Emmanuel Macron is the '
+                                       'French president. ', max_chars=2048, height=250)
 
 # Prediction
 with st.spinner('Please wait while the inputs are being processed...'):
     prediction = model.predict([inputs], input_max_length=512, output_max_length=128)
 
-# Answer area
+# Display result
 st.write(prediction)
