@@ -80,7 +80,8 @@ pip install -r requirements.txt
 | translate: What is your name?| Quel est ton nom? |
 | paraphrase: I hate spiders| I dislike spiders |
 
-2. Train a model (see `train.py` script).
+2. Train a model (see `train.py` script). You can also use the command line `python source/train.py` with your own
+   arguments.
 
 ```python
 from source.datamodule import DataModule
@@ -108,6 +109,7 @@ Trainer(max_epochs=10, gpus=1, default_root_dir='model/').fit(model=model, datam
 ```
 
 3. Use a model for inference (see `inference.py` script).
+
 ```python
 from transformers import AutoTokenizer
 from source.mt5 import MT5
@@ -121,10 +123,11 @@ inputs = ['question: Who is the French president?  context: Emmanuel Macron is t
 # Prediction
 prediction = model.predict(inputs=inputs)
 
-print(prediction) # --> Emmanuel Macron
+print(prediction)  # --> Emmanuel Macron
 ```
 
 4. Use Streamlit web app after updating `path_to_checkpoint` in `app.py` with your model path.
+
 ```shell
 streamlit run app.py
 ```
