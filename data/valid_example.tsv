@@ -1,0 +1,3 @@
+inputs	outputs
+classify: It's so bad'.	neg
+classify: That's good.	pos

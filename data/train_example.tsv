@@ -1,0 +1,5 @@
+inputs	outputs
+classify: I don't like this.	neg
+classify: It tastes awful.	neg
+classify: It's so good!	pos
+classify: This is very good.	pos

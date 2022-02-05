@@ -1,7 +1,7 @@
 venv/
 .idea/
-data/
+data/*
 model/
 tokenizer/
-!data/train_ex.tsv
-!data/valid_ex.tsv
+!data/train_example.tsv
+!data/valid_example.tsv
