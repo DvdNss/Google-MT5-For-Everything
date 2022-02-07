@@ -5,10 +5,13 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## About The Project 
+
 
 Google MT5 Transformers models of any size for everything that is input-output NLP using `PyTorch-Lightning`
-, `Hugging Face`, `Cuda` and `Streamlit`.
+, `Hugging Face`, `Cuda` and `Streamlit`. 
+
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11vmQweNDwx6UL9TIXBoxAErtx0mXgxWY?usp=sharing)
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -60,6 +63,8 @@ pip install -r requirements.txt
   * `train_example.tsv`: training file example.
   * `valid_example.tsv`: validation file example.
 * `model/`: folder containing models.
+* `notebook/`: folder containing jupyter notebook.
+  * `Google-MT5-For-Everything.ipynb`: jupyter notebook.
 * `resource/`: folder containing repo's imgs.
 * `source/`: folder containing source files.
     * `datamodule.py`: data module script.
