@@ -6,11 +6,9 @@ Author: @DvdNss
 Created on 2/2/2022
 """
 
-from typing import List
-
 import torch
 from pytorch_lightning import LightningModule
-from transformers import AdamW, MT5ForConditionalGeneration, AutoTokenizer
+from transformers import MT5ForConditionalGeneration, AutoTokenizer
 
 
 class MT5(LightningModule):
