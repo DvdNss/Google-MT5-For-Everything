@@ -10,6 +10,7 @@ import os
 
 import torch.cuda
 from pytorch_lightning import seed_everything, Trainer
+from pytorch_lightning.loggers import WandbLogger
 
 from datamodule import DataModule
 from mt5 import MT5
@@ -34,6 +35,7 @@ def run():
     parser.add_argument('--epochs', help='Number of epochs. ', default=1, type=int)
     parser.add_argument('--lr', help='Learning rate. ', default=5e-4, type=float)
     parser.add_argument('--seed', help='Set seed. ', default=42, type=int)
+    parser.add_argument('--wandb', help='Weights and Biases project name', default='mt5-for-everything', type=str)
     parser = parser.parse_args()
 
     # Seed module
@@ -54,11 +56,15 @@ def run():
     # Build model
     model = MT5(model_name_or_path=parser.model_name_or_path, learning_rate=parser.lr)
 
+    # Init. wandb logger
+    wandb_logger = WandbLogger(project=parser.wandb)
+
     # Run training
     Trainer(
         max_epochs=parser.epochs,
         gpus=parser.num_gpus,
         default_root_dir=parser.output_dir,
+        logger=wandb_logger,
     ).fit(model=model, datamodule=data)
 
 
