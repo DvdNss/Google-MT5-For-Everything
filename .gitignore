@@ -3,5 +3,6 @@ venv/
 data/*
 model/
 tokenizer/
+wandb/
 !data/train_example.tsv
 !data/valid_example.tsv
