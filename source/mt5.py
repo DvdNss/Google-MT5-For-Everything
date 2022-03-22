@@ -92,7 +92,7 @@ class MT5(LightningModule):
         Optimizer configuration.
         """
 
-        return AdamW(self.model.parameters(), lr=self.lr)
+        return torch.optim.AdamW(self.model.parameters(), lr=self.lr)
 
     def get_progress_bar_dict(self):
         """
