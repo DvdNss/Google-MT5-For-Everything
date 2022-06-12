@@ -7,4 +7,4 @@ transformers>=4.15.0
 sentencepiece>=0.1.96
 protobuf>=3.19.1
 wandb>=0.12.11
-pandas>=1.4.1
+pandas
