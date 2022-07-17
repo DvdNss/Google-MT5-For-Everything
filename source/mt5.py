@@ -8,7 +8,7 @@ Created on 2/2/2022
 
 import torch
 from pytorch_lightning import LightningModule
-from transformers import MT5ForConditionalGeneration, AutoTokenizer
+from transformers import MT5ForConditionalGeneration, AutoTokenizer, AutoModelForSeq2SeqLM
 
 
 class MT5(LightningModule):
@@ -28,7 +28,8 @@ class MT5(LightningModule):
         # Load model and tokenizer
         self.save_hyperparameters()
         self.lr = learning_rate
-        self.model = MT5ForConditionalGeneration.from_pretrained(
+
+        self.model = AutoModelForSeq2SeqLM.from_pretrained(
             model_name_or_path) if model_name_or_path is not None else None
         self.tokenizer = AutoTokenizer.from_pretrained(model_name_or_path,
                                                        use_fast=True) if model_name_or_path is not None else None
